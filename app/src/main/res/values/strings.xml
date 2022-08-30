@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">InstagramClone2</string>
+    <string name="enter_your_password_here">Enter your Password here ...</string>
+    <string name="enter_your_usernname_here">Enter your Usernname here...</string>
+    <string name="log_in">Log In</string>
+    <string name="sign_up">Sign Up</string>
+</resources>

@@ -13,7 +13,9 @@ import android.widget.ProgressBar;
 
 import com.parse.Parse;
 import com.parse.ParseException;
+import com.parse.ParseObject;
 import com.parse.ParseUser;
+import com.parse.SaveCallback;
 import com.parse.SignUpCallback;
 import com.shashank.sony.fancytoastlib.FancyToast;
 
@@ -26,6 +28,7 @@ public   class MainActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setTitle("SignUp");
+
         edtSignUpName = findViewById(R.id.edtSignUpName);
         edtSignUpPassword = findViewById(R.id.edtSignUpPassword);
         edtSignUpEmail = findViewById(R.id.edtSignUpEmail);

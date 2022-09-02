@@ -30,6 +30,9 @@ public class LogInto extends AppCompatActivity implements View.OnClickListener {
         btnLogIn2 = findViewById(R.id.btnLogIn2);
         btnSignUp2.setOnClickListener(this);
         btnLogIn2.setOnClickListener(this);
+        if (ParseUser.getCurrentUser()!=null){
+            ParseUser.getCurrentUser().logOut();
+        }
 
     }
 

@@ -36,6 +36,9 @@ public   class MainActivity extends AppCompatActivity implements View.OnClickLis
         btnLogIn1 = findViewById(R.id.btnLogIn1);
         btnSignUp1.setOnClickListener(MainActivity.this);
         btnLogIn1.setOnClickListener(MainActivity.this);
+        if (ParseUser.getCurrentUser()!=null){
+            ParseUser.getCurrentUser().logOut();
+        }
 
 
 
@@ -51,6 +54,13 @@ public   class MainActivity extends AppCompatActivity implements View.OnClickLis
                 appUser.setUsername(edtSignUpName.getText().toString());
                 appUser.setEmail(edtSignUpEmail.getText().toString());
                 appUser.setPassword(edtSignUpPassword.getText().toString());
+                ProgressDialog progressBar = new ProgressDialog(this);
+                progressBar.setCancelable(true);//you can cancel it by pressing back button
+                progressBar.setMessage("File downloading ...");
+                progressBar.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+                progressBar.setProgress(0);//initially progress is 0
+                progressBar.setMax(100);//sets the maximum value 100
+                progressBar.show();//displays the progress bar
                 appUser.signUpInBackground(new SignUpCallback() {
                     @Override
                     public void done(ParseException e) {

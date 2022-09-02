@@ -34,6 +34,7 @@
         <meta-data
             android:name="com.parse.CLIENT_KEY"
             android:value="@string/back4app_client_key" />
+        <activity android:name=".LogInto" />
 
     </application>
 
